@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "alwaysStrict": true,
+    "skipLibCheck": false,
+    "lib": ["ESNext"],
+    "types": ["node", "react", "react-native"],
+    "typeRoots": ["./src/types"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["./.bundle/**/*", "./.vscode/**/*", "./android/**/*", "./ios/**/*", "./node_modules/**/*", "./tests/**/*"],
+  "include": ["./index.ts", "./src/**/*"]
+}

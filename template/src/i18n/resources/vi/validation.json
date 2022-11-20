@@ -1,0 +1,15 @@
+{
+  "confirmationPassword": "Mật khẩu xác nhận không hợp lệ",
+  "creditCard": "Thẻ tín dụng không hợp lệ",
+  "dataTime": "Ngày và thời gian không hợp lệ",
+  "date": "Ngày không hợp lệ",
+  "decimal": "Số thập phân không hợp lệ",
+  "email": "Email không hợp lệ",
+  "integer": "Số nguyên không hợp lệ",
+  "name": "Tên không hợp lệ",
+  "number": "Số không hợp lệ",
+  "password": "Mật khẩu không hợp lệ",
+  "phone": "Số điện thoại không hợp lệ",
+  "time": "Thời gian không hợp lệ",
+  "url": "URL không hợp lệ"
+}

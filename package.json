@@ -1,0 +1,41 @@
+{
+  "name": "@daomtthuan/react-native-template",
+  "displayName": "React Native Template",
+  "version": "1.0.0",
+  "description": "React Native template with all setup",
+  "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
+  "homepage": "https://github.com/daomtthuan/react-native-template#readme",
+  "repository": "https://github.com/daomtthuan/react-native-template.git",
+  "readme": "https://github.com/daomtthuan/react-native-template#readme",
+  "bugs": {
+    "email": "daomtthuan@gmail.com",
+    "url": "https://github.com/daomtthuan/react-native-template/issues"
+  },
+  "private": false,
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/daomtthuan/react-native-template/main/LICENSE"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Daomtthuan",
+      "email": "daomtthuan@gmail.com",
+      "url": "https://github.com/daomtthuan"
+    }
+  ],
+  "keywords": [
+    "react-native",
+    "template",
+    "react",
+    "typescript",
+    "jest",
+    "navigation",
+    "native-base",
+    "i18n",
+    "redux",
+    "boilerplate"
+  ]
+}

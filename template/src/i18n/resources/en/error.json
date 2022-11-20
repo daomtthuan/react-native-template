@@ -1,0 +1,7 @@
+{
+  "app": {
+    "init": {
+      "000000": "Application startup failed"
+    }
+  }
+}

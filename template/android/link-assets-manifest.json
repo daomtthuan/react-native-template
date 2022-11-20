@@ -1,0 +1,189 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/sans/Nunito-Black.ttf",
+      "sha1": "6b41ef726f3dba8f3d8889c0f4c4b17832811642"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-BlackItalic.ttf",
+      "sha1": "4912f710fef88cc3770612f053b7a452bc41668d"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-Bold.ttf",
+      "sha1": "dea5eec0aca2aef62e3bfc625cf95f9d45b59687"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-BoldItalic.ttf",
+      "sha1": "6d0327da2af845fdfa6a3cfeb5c123784d087753"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-ExtraBold.ttf",
+      "sha1": "60821838f6675153f0699c6a86ad8467a937e0f5"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-ExtraBoldItalic.ttf",
+      "sha1": "165391d62a4c86447db00b1c28278083aa2f1747"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-ExtraLight.ttf",
+      "sha1": "5147803c00983715429e5f492938c8a3e6552839"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-ExtraLightItalic.ttf",
+      "sha1": "25c78ceeff212006f7a7b449df2baabfeec1742b"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-Italic.ttf",
+      "sha1": "c82dbd0b140a67ab9f201ef062d8377318098399"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-Light.ttf",
+      "sha1": "7879b46e377513f6eb1c52f99000c8e96f36cf6e"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-LightItalic.ttf",
+      "sha1": "b0e913e197ffad44911988e48b2452ee1ea64051"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-Medium.ttf",
+      "sha1": "0e3a9789daa6603bf6870c124727c3643b56574a"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-MediumItalic.ttf",
+      "sha1": "64e9688f18b3e12772d9c4707525f51057be7d3f"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-Regular.ttf",
+      "sha1": "4b7236ba666cb77f00d8cb2a17696cc0dc2b2cc9"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-SemiBold.ttf",
+      "sha1": "876165d70aa2e00f66737c7dd87039e2619bf2c2"
+    },
+    {
+      "path": "src/assets/fonts/sans/Nunito-SemiBoldItalic.ttf",
+      "sha1": "7bd1aee703efa1423dc584f39658e113358561ac"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-Bold.ttf",
+      "sha1": "5d04292631397a236aba59348b3055140e38b2f0"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-BoldItalic.ttf",
+      "sha1": "63680ea846017ab3607426e7ebecbe0d210a3707"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-ExtraLight.ttf",
+      "sha1": "93ba812d1f7e5a22bde39b17aad1114cc1666568"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-ExtraLightItalic.ttf",
+      "sha1": "717bfdc061041ef1d60ecee30cec7bddf4fcd49e"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-Italic.ttf",
+      "sha1": "63a47a166994617de29ca38da2c6dbcd5fa12537"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-Light.ttf",
+      "sha1": "e433599d7e8702725b952ce3259a8997450659b4"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-LightItalic.ttf",
+      "sha1": "56f6c0fd22e3b8ffb46b738869085200dbb1dbdc"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-Regular.ttf",
+      "sha1": "b5abff60d40b4cfee59e3a7550ac8f0a82e3e6e3"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-SemiBold.ttf",
+      "sha1": "7cae59d840d6cf0649aa36e4addb995e84773b73"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-SemiBoldItalic.ttf",
+      "sha1": "9593b6360528fa0ca1edda3ab0168823815a0486"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-SemiLight.ttf",
+      "sha1": "000a6e3952963fdf695a7a644073411e5cab2e88"
+    },
+    {
+      "path": "src/assets/fonts/mono/CascadiaCode-SemiLightItalic.ttf",
+      "sha1": "0aea1b142deda05853da4bbfa99ea9e53f34f123"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Black.ttf",
+      "sha1": "f726c4af76834cf9068cfa4f39f88f4ab72c7e60"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-BlackItalic.ttf",
+      "sha1": "22ef15d5756e1b19e36d25b7efd5f53db441f2a4"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Bold.ttf",
+      "sha1": "06f89e75fb6493092cbb2cfcd42af1e67baeb5eb"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-BoldItalic.ttf",
+      "sha1": "281c773a8153bfdd1ae388dbebdfa0ece56cdd70"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-ExtraBold.ttf",
+      "sha1": "6be66c9a43907024d4b27f648701f729d3ebd137"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-ExtraBoldItalic.ttf",
+      "sha1": "dcf2662cec2f39fa0f227b93231a09233112ec92"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-ExtraLight.ttf",
+      "sha1": "6522e4b20628be23387268f5a3b6f6342e6f134a"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-ExtraLightItalic.ttf",
+      "sha1": "6201077612c0ca277b1f6f9facfde233b9eae1c9"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Italic.ttf",
+      "sha1": "b6599ba68566bc84b3372dea90d223101aae17b9"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Light.ttf",
+      "sha1": "84ca814bd9ba3d9ffbb6175dd8bbe1808791c29c"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-LightItalic.ttf",
+      "sha1": "63bdf68ed6e8f2565d6ff1c0c3745c7ed2b5cd69"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Medium.ttf",
+      "sha1": "77163bf5ecfc289dec0f172b99b73fee1c8d6a6c"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-MediumItalic.ttf",
+      "sha1": "1233cd6b57bc8e5421d694103a9bdf2a134505a0"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Regular.ttf",
+      "sha1": "0ae9167b7b8fa11815ec62ced636a7ef48a787b2"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-SemiBold.ttf",
+      "sha1": "c2aed6f18910b26e48227c8a58d107fcb8e90375"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-SemiBoldItalic.ttf",
+      "sha1": "3548b917902f8978c538e0b7f29cb0ef01456f70"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-Thin.ttf",
+      "sha1": "3f26e41f0d204716e2b92e242a84587649076c01"
+    },
+    {
+      "path": "src/assets/fonts/display/MuseoModerno-ThinItalic.ttf",
+      "sha1": "f471941641e2538222a06f6ef1a7ccdf7a9558ca"
+    }
+  ]
+}

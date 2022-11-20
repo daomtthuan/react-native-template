@@ -1,0 +1,37 @@
+{
+  "cSpell.words": ["cascadia", "Daomtthuan", "fontawesome", "fortawesome", "intl", "moderno", "museo", "nunito", "pluralrules", "tsdoc"],
+
+  "i18n-ally.defaultNamespace": "common",
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.enabledFrameworks": ["i18next", "react"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["./src/i18n/resources"],
+  "i18n-ally.namespace": true,
+  "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
+
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 160,
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "disableSort": true,
+      "orderLevel": 10,
+      "regex": "^$",
+      "type": "importMember"
+    },
+    {
+      "orderLevel": 40,
+      "regex": "^[@]/"
+    },
+    {
+      "orderLevel": 30,
+      "regex": "^[@]"
+    },
+    {
+      "orderLevel": 50,
+      "regex": "^[.]"
+    }
+  ],
+  "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
+  "importSorter.sortConfiguration.removeUnusedImports": true
+}

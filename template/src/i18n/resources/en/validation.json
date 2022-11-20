@@ -1,0 +1,15 @@
+{
+  "confirmationPassword": "Invalid confirmation password",
+  "creditCard": "Invalid credit card",
+  "dataTime": "Invalid date and time",
+  "date": "Invalid date",
+  "decimal": "Invalid decimal",
+  "email": "Invalid email",
+  "integer": "Invalid integer",
+  "name": "Invalid name",
+  "number": "Invalid number",
+  "password": "Invalid password",
+  "phone": "Invalid phone",
+  "time": "Invalid time",
+  "url": "Invalid url"
+}
