@@ -1,22 +1,22 @@
 {
-  "name": "@daomtthuan/react-native-template",
+  "name": "@daomtthuan/react-native-template-all-setup",
   "displayName": "React Native Template",
   "version": "0.5.0",
   "description": "React Native template with all setup",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
-  "homepage": "https://github.com/daomtthuan/react-native-template#readme",
-  "repository": "https://github.com/daomtthuan/react-native-template.git",
-  "readme": "https://github.com/daomtthuan/react-native-template#readme",
+  "homepage": "https://github.com/daomtthuan/react-native-template-all-setup#readme",
+  "repository": "https://github.com/daomtthuan/react-native-template-all-setup.git",
+  "readme": "https://github.com/daomtthuan/react-native-template-all-setup#readme",
   "bugs": {
     "email": "daomtthuan@gmail.com",
-    "url": "https://github.com/daomtthuan/react-native-template/issues"
+    "url": "https://github.com/daomtthuan/react-native-template-all-setup/issues"
   },
   "private": false,
   "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.githubusercontent.com/daomtthuan/react-native-template/main/LICENSE"
+      "url": "https://raw.githubusercontent.com/daomtthuan/react-native-template-all-setup/main/LICENSE"
     }
   ],
   "contributors": [

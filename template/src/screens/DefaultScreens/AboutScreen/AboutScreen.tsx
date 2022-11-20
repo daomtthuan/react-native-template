@@ -26,7 +26,7 @@ export default function AboutScreen({ navigation }: AboutScreenProps) {
         </HStack>
         <HStack>
           <Text bold>Github: </Text>
-          <Link href="https://github.com/daomtthuan/react-native-template">@daomtthuan/react-native-template</Link>
+          <Link href="https://github.com/daomtthuan/react-native-template-all-setup">@daomtthuan/react-native-template-all-setup</Link>
         </HStack>
       </VStack>
       <Divider />
