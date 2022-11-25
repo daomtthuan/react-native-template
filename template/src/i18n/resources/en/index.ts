@@ -6,7 +6,8 @@ import label from './label.json';
 import screen from './screen.json';
 import validation from './validation.json';
 
-export default {
+/** Locale resources. */
+const enLocaleResource: LocaleResource = {
   /** English locale code. */
   code: LocaleCode.EN,
   /** English display name. */
@@ -26,4 +27,6 @@ export default {
     /** English button resource. */
     [LocaleResourceNamespace.BUTTON]: button,
   },
-} as LocaleResource;
+};
+
+export default enLocaleResource;

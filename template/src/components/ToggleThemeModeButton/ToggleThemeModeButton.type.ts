@@ -1,5 +1,6 @@
 import { PropsWithoutRef } from 'react';
-import { EmptyObject } from 'type-fest';
+
+import { HeaderButtonProps } from '@react-navigation/elements';
 
 /** ToggleThemeModeButton props. */
-export type ToggleThemeModeButtonProps = PropsWithoutRef<EmptyObject>;
+export type ToggleThemeModeButtonProps = PropsWithoutRef<HeaderButtonProps>;

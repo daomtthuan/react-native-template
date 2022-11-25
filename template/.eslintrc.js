@@ -18,7 +18,7 @@ module.exports = {
     },
   },
 
-  plugins: ['@typescript-eslint', 'react', 'react-native', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'react-native', 'prettier', 'jest'],
 
   extends: [
     '@react-native-community',

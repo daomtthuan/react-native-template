@@ -9,7 +9,7 @@ import { statusChecker } from '@/common/hook';
 import { useI18n } from '@/i18n';
 import { DefaultRouter } from '@/routers/DefaultRouter';
 import { ErrorScreen } from '@/screens/SharedScreens';
-import { themeConfig } from '@/theme';
+import themeConfig from '@/theme';
 import { useLogger } from '@/utils/logger';
 
 /**
@@ -17,13 +17,17 @@ import { useLogger } from '@/utils/logger';
  *
  * @returns The App component.
  */
-export default function App() {
+function App() {
+  /** Logger status. */
   const loggerStatus = useLogger();
+  /** I18n status. */
   const i18nStatus = useI18n();
 
+  /** Module statuses list. */
   const statuses = useMemo(() => [loggerStatus, i18nStatus], [loggerStatus, i18nStatus]);
 
   useEffect(() => {
+    // Hide splash screen after all modules are ready
     if (statusChecker.isReady(statuses)) {
       SplashScreen.hide();
     }
@@ -41,3 +45,5 @@ export default function App() {
     </NativeBaseProvider>
   );
 }
+
+export default App;

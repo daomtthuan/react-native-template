@@ -1,6 +1,7 @@
 import { HookStatus } from './hook.type';
 
-export default {
+/** Status checker. */
+const statusChecker = {
   /**
    * Check any status is pending or not.
    *
@@ -11,11 +12,11 @@ export default {
   isPending: (statuses: HookStatus[]) => statuses.some((status) => status === 'pending'),
 
   /**
-   * Check all statues are ready or not.
+   * Check all statuses are ready or not.
    *
    * @param statuses Statuses to check.
    *
-   * @returns Are all statues are ready or not.
+   * @returns Are all statuses are ready or not.
    */
   isReady: (statuses: HookStatus[]) => statuses.every((status) => status !== 'idle' && status !== 'pending'),
 
@@ -28,3 +29,5 @@ export default {
    */
   isError: (statuses: HookStatus[]) => statuses.some((status) => status === 'error'),
 };
+
+export default statusChecker;

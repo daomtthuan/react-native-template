@@ -6,7 +6,7 @@ import label from './label.json';
 import screen from './screen.json';
 import validation from './validation.json';
 
-export default {
+const viLocaleResource: LocaleResource = {
   /** Vietnamese locale code. */
   code: LocaleCode.VI,
   /** Vietnamese display name. */
@@ -26,4 +26,6 @@ export default {
     /** Vietnamese button resource. */
     [LocaleResourceNamespace.BUTTON]: button,
   },
-} as LocaleResource;
+};
+
+export default viLocaleResource;

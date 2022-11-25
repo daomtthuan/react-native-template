@@ -3,8 +3,8 @@ import { extendTheme } from 'native-base';
 import { colorConfig } from './color';
 import { fontConfig } from './font';
 
-export default extendTheme({
-  /** Theme config. */
+const themeConfig = extendTheme({
+  /** Config. */
   config: {
     initialColorMode: 'light',
   },
@@ -19,3 +19,5 @@ export default extendTheme({
 
   /** Theme components config. */
 });
+
+export default themeConfig;

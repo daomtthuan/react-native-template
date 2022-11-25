@@ -4,7 +4,7 @@ module.exports = {
 
   // Prettier options
   arrowParens: 'always',
-  bracketSameLine: true,
+  bracketSameLine: false,
   bracketSpacing: true,
   jsxSingleQuote: false,
   printWidth: 160,

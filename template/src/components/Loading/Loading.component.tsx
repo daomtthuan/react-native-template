@@ -10,7 +10,7 @@ import { LoadingProps } from './Loading.type';
  *
  * @returns The Loading component.
  */
-export default function Loading(props: LoadingProps) {
+function Loading(props: LoadingProps) {
   const defaultSpinnerColor = useColorModeValue(colorValues.primary[500], colorValues.primary[300]) as string;
   const defaultTextColor = useColorModeValue(colorValues.dark[900], colorValues.light[900]) as string;
 
@@ -25,3 +25,5 @@ export default function Loading(props: LoadingProps) {
     </Stack>
   );
 }
+
+export default Loading;

@@ -1,5 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
 
+import { ToggleThemeModeButton } from '@/components/ToggleThemeModeButton';
 import { AboutScreen, DefaultRouterParamList, WelcomeScreen } from '@/screens/DefaultScreens';
 
 const { Navigator, Screen } = createStackNavigator<DefaultRouterParamList>();
@@ -9,11 +10,18 @@ const { Navigator, Screen } = createStackNavigator<DefaultRouterParamList>();
  *
  * @returns The Default router component.
  */
-export default function DefaultRouter() {
+function DefaultRouter() {
   return (
-    <Navigator initialRouteName="Welcome">
+    <Navigator
+      initialRouteName="Welcome"
+      screenOptions={{
+        headerRight: ToggleThemeModeButton,
+      }}
+    >
       <Screen name="Welcome" component={WelcomeScreen} />
       <Screen name="About" component={AboutScreen} />
     </Navigator>
   );
 }
+
+export default DefaultRouter;

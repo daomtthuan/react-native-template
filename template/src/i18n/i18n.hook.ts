@@ -16,12 +16,12 @@ import i18nConfig from './i18n.config';
  * @returns The language detector.
  */
 function useLanguageDetector() {
-  // Init language detector.
+  /** Init language detector. */
   const initDetector = useCallback<LanguageDetectorAsyncModule['init']>(() => {
     // Do nothing.
   }, []);
 
-  // Detect language.
+  /** Detect language. */
   const detectLanguage = useCallback<LanguageDetectorAsyncModule['detect']>(async (setLanguage) => {
     await executeActionAsync(
       async () => {
@@ -35,7 +35,7 @@ function useLanguageDetector() {
     );
   }, []);
 
-  // Cache language when changed.
+  /** Cache language when changed. */
   const cacheLanguage = useCallback<LanguageDetectorAsyncModule['cacheUserLanguage']>(async (language) => {
     await executeActionAsync(
       async () => {
@@ -45,7 +45,7 @@ function useLanguageDetector() {
     );
   }, []);
 
-  // Language detector.
+  /** Language detector. */
   const languageDetector = useMemo<LanguageDetectorAsyncModule>(
     () => ({
       type: 'languageDetector',
@@ -65,10 +65,10 @@ function useLanguageDetector() {
  *
  * @returns The I18n status.
  */
-export default function useI18n() {
+function useI18n() {
   const languageDetector = useLanguageDetector();
 
-  // Init i18n
+  /** Init i18n. */
   const initI18n = useCallback(async () => {
     await executeActionAsync(
       async () => {
@@ -98,3 +98,5 @@ export default function useI18n() {
 
   return status;
 }
+
+export default useI18n;

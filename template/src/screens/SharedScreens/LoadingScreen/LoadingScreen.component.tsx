@@ -7,10 +7,12 @@ import { Loading } from '@/components/Loading';
  *
  * @returns The Loading screen component.
  */
-export default function LoadingScreen() {
+function LoadingScreen() {
   return (
     <VStack flex={1} justifyContent="center" alignItems="center" safeArea>
       <Loading />
     </VStack>
   );
 }
+
+export default LoadingScreen;

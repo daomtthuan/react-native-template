@@ -16,7 +16,8 @@ export default function AboutScreen({ navigation }: AboutScreenProps) {
       p={4}
       space={4}
       _light={{ backgroundColor: 'light.900' }}
-      _dark={{ backgroundColor: 'dark.900' }}>
+      _dark={{ backgroundColor: 'dark.900' }}
+    >
       <Heading>React Native template</Heading>
       <VStack width="full">
         <Text>React Native template with all setup</Text>

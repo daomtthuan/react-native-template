@@ -212,7 +212,9 @@ const fontFamilyMap: FontFamilyMap = {
   [FontType.SANS]: FontName.SANS,
 };
 
-export default {
+const fontConfig: FontConfig = {
   assetMap,
   fontFamilyMap,
-} as FontConfig;
+};
+
+export default fontConfig;
