@@ -1,7 +1,7 @@
 {
   "name": "@daomtthuan/react-native-template-all-setup",
   "displayName": "React Native Template",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "React Native template with all setup",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
   "homepage": "https://github.com/daomtthuan/react-native-template-all-setup#readme",
@@ -31,7 +31,6 @@
     "template",
     "react",
     "typescript",
-    "jest",
     "navigation",
     "native-base",
     "i18n",
