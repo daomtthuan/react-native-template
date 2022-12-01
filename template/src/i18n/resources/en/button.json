@@ -1,1 +1,14 @@
-{}
+{
+  "screen": {
+    "default": {
+      "welcome": {
+        "about": "About",
+        "changeLanguage": "Change Language to"
+      }
+    },
+    "shared": {
+      "error": {},
+      "loading": {}
+    }
+  }
+}

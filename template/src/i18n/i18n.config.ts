@@ -1,11 +1,11 @@
 import { I18nConfig } from './i18n.type';
-import { LocaleCode, LocaleResourceNamespace, localeResources } from './resources';
+import { localeCode, localeResourceNamespace, localeResources } from './resources';
 
 /** I18n configs. */
 const i18nConfig: I18nConfig = {
-  defaultLocale: LocaleCode.VI,
-  namespaces: Object.values(LocaleResourceNamespace),
-  defaultNamespace: LocaleResourceNamespace.COMMON,
+  defaultLocale: localeCode.vi,
+  namespaces: Object.values(localeResourceNamespace),
+  defaultNamespace: localeResourceNamespace.common,
   resources: localeResources,
 };
 

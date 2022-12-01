@@ -1,220 +1,223 @@
-import { FontAssetMap, FontConfig, FontFamilyMap, FontName, FontStyle, FontType, FontWeight } from './font.type';
+import { FontAsset, FontConfig, FontFamily, fontName, fontStyle, fontType, fontWeight } from './font.type';
 
-const assetMap: FontAssetMap = {
+/** Font asset. */
+const assets: FontAsset = {
   /** Font display. */
-  [FontName.DISPLAY]: {
+  [fontName.display]: {
     /** Font display weight thin. */
-    [FontWeight.THIN]: {
+    [fontWeight.thin]: {
       /** Font display weight thin normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Thin',
+      [fontStyle.normal]: 'MuseoModerno-Thin',
       /** Font display weight thin italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ThinItalic',
+      [fontStyle.italic]: 'MuseoModerno-ThinItalic',
     },
     /** Font display weight extra light. */
-    [FontWeight.EXTRA_LIGHT]: {
+    [fontWeight.extraLight]: {
       /** Font display weight extra light normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-ExtraLight',
+      [fontStyle.normal]: 'MuseoModerno-ExtraLight',
       /** Font display weight extra light italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ExtraLightItalic',
+      [fontStyle.italic]: 'MuseoModerno-ExtraLightItalic',
     },
     /** Font display weight light. */
-    [FontWeight.LIGHT]: {
+    [fontWeight.light]: {
       /** Font display weight light normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Light',
+      [fontStyle.normal]: 'MuseoModerno-Light',
       /** Font display weight light italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-LightItalic',
+      [fontStyle.italic]: 'MuseoModerno-LightItalic',
     },
     /** Font display weight normal. */
-    [FontWeight.NORMAL]: {
+    [fontWeight.normal]: {
       /** Font display weight normal regular. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Regular',
+      [fontStyle.normal]: 'MuseoModerno-Regular',
       /** Font display weight normal italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-Italic',
+      [fontStyle.italic]: 'MuseoModerno-Italic',
     },
     /** Font display weight medium. */
-    [FontWeight.MEDIUM]: {
+    [fontWeight.medium]: {
       /** Font display weight medium normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Medium',
+      [fontStyle.normal]: 'MuseoModerno-Medium',
       /** Font display weight medium italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-MediumItalic',
+      [fontStyle.italic]: 'MuseoModerno-MediumItalic',
     },
     /** Font display weight semi bold. */
-    [FontWeight.SEMI_BOLD]: {
+    [fontWeight.semiBold]: {
       /** Font display weight semi bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-SemiBold',
+      [fontStyle.normal]: 'MuseoModerno-SemiBold',
       /** Font display weight semi bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-SemiBoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-SemiBoldItalic',
     },
     /** Font display weight bold. */
-    [FontWeight.BOLD]: {
+    [fontWeight.bold]: {
       /** Font display weight bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Bold',
+      [fontStyle.normal]: 'MuseoModerno-Bold',
       /** Font display weight bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-BoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-BoldItalic',
     },
     /** Font display weight extra bold. */
-    [FontWeight.EXTRA_BOLD]: {
+    [fontWeight.extraBold]: {
       /** Font display weight extra bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-ExtraBold',
+      [fontStyle.normal]: 'MuseoModerno-ExtraBold',
       /** Font display weight extra bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ExtraBoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-ExtraBoldItalic',
     },
     /** Font display weight black. */
-    [FontWeight.BLACK]: {
+    [fontWeight.black]: {
       /** Font display weight black normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Black',
+      [fontStyle.normal]: 'MuseoModerno-Black',
       /** Font display weight black italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-BlackItalic',
+      [fontStyle.italic]: 'MuseoModerno-BlackItalic',
     },
   },
 
   /** Font mono. */
-  [FontName.MONO]: {
+  [fontName.mono]: {
     /** Font mono weight thin. */
-    [FontWeight.THIN]: {
+    [fontWeight.thin]: {
       /** Font mono weight thin normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Thin',
+      [fontStyle.normal]: 'MuseoModerno-Thin',
       /** Font mono weight thin italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ThinItalic',
+      [fontStyle.italic]: 'MuseoModerno-ThinItalic',
     },
     /** Font mono weight extra light. */
-    [FontWeight.EXTRA_LIGHT]: {
+    [fontWeight.extraLight]: {
       /** Font mono weight extra light normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-ExtraLight',
+      [fontStyle.normal]: 'MuseoModerno-ExtraLight',
       /** Font mono weight extra light italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ExtraLightItalic',
+      [fontStyle.italic]: 'MuseoModerno-ExtraLightItalic',
     },
     /** Font mono weight light. */
-    [FontWeight.LIGHT]: {
+    [fontWeight.light]: {
       /** Font mono weight light normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Light',
+      [fontStyle.normal]: 'MuseoModerno-Light',
       /** Font mono weight light italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-LightItalic',
+      [fontStyle.italic]: 'MuseoModerno-LightItalic',
     },
     /** Font mono weight normal. */
-    [FontWeight.NORMAL]: {
+    [fontWeight.normal]: {
       /** Font mono weight normal regular. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Regular',
+      [fontStyle.normal]: 'MuseoModerno-Regular',
       /** Font mono weight normal italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-Italic',
+      [fontStyle.italic]: 'MuseoModerno-Italic',
     },
     /** Font mono weight medium. */
-    [FontWeight.MEDIUM]: {
+    [fontWeight.medium]: {
       /** Font mono weight medium normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Medium',
+      [fontStyle.normal]: 'MuseoModerno-Medium',
       /** Font mono weight medium italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-MediumItalic',
+      [fontStyle.italic]: 'MuseoModerno-MediumItalic',
     },
     /** Font mono weight semi bold. */
-    [FontWeight.SEMI_BOLD]: {
+    [fontWeight.semiBold]: {
       /** Font mono weight semi bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-SemiBold',
+      [fontStyle.normal]: 'MuseoModerno-SemiBold',
       /** Font mono weight semi bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-SemiBoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-SemiBoldItalic',
     },
     /** Font mono weight bold. */
-    [FontWeight.BOLD]: {
+    [fontWeight.bold]: {
       /** Font mono weight bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Bold',
+      [fontStyle.normal]: 'MuseoModerno-Bold',
       /** Font mono weight bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-BoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-BoldItalic',
     },
     /** Font mono weight extra bold. */
-    [FontWeight.EXTRA_BOLD]: {
+    [fontWeight.extraBold]: {
       /** Font mono weight extra bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-ExtraBold',
+      [fontStyle.normal]: 'MuseoModerno-ExtraBold',
       /** Font mono weight extra bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ExtraBoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-ExtraBoldItalic',
     },
     /** Font mono weight black. */
-    [FontWeight.BLACK]: {
+    [fontWeight.black]: {
       /** Font mono weight black normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Black',
+      [fontStyle.normal]: 'MuseoModerno-Black',
       /** Font mono weight black italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-BlackItalic',
+      [fontStyle.italic]: 'MuseoModerno-BlackItalic',
     },
   },
 
   /** Font sans. */
-  [FontName.SANS]: {
+  [fontName.sans]: {
     /** Font sans weight thin. */
-    [FontWeight.THIN]: {
+    [fontWeight.thin]: {
       /** Font sans weight thin normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Thin',
+      [fontStyle.normal]: 'MuseoModerno-Thin',
       /** Font sans weight thin italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ThinItalic',
+      [fontStyle.italic]: 'MuseoModerno-ThinItalic',
     },
     /** Font sans weight extra light. */
-    [FontWeight.EXTRA_LIGHT]: {
+    [fontWeight.extraLight]: {
       /** Font sans weight extra light normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-ExtraLight',
+      [fontStyle.normal]: 'MuseoModerno-ExtraLight',
       /** Font sans weight extra light italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ExtraLightItalic',
+      [fontStyle.italic]: 'MuseoModerno-ExtraLightItalic',
     },
     /** Font sans weight light. */
-    [FontWeight.LIGHT]: {
+    [fontWeight.light]: {
       /** Font sans weight light normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Light',
+      [fontStyle.normal]: 'MuseoModerno-Light',
       /** Font sans weight light italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-LightItalic',
+      [fontStyle.italic]: 'MuseoModerno-LightItalic',
     },
     /** Font sans weight normal. */
-    [FontWeight.NORMAL]: {
+    [fontWeight.normal]: {
       /** Font sans weight normal regular. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Regular',
+      [fontStyle.normal]: 'MuseoModerno-Regular',
       /** Font sans weight normal italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-Italic',
+      [fontStyle.italic]: 'MuseoModerno-Italic',
     },
     /** Font sans weight medium. */
-    [FontWeight.MEDIUM]: {
+    [fontWeight.medium]: {
       /** Font sans weight medium normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Medium',
+      [fontStyle.normal]: 'MuseoModerno-Medium',
       /** Font sans weight medium italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-MediumItalic',
+      [fontStyle.italic]: 'MuseoModerno-MediumItalic',
     },
     /** Font sans weight semi bold. */
-    [FontWeight.SEMI_BOLD]: {
+    [fontWeight.semiBold]: {
       /** Font sans weight semi bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-SemiBold',
+      [fontStyle.normal]: 'MuseoModerno-SemiBold',
       /** Font sans weight semi bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-SemiBoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-SemiBoldItalic',
     },
     /** Font sans weight bold. */
-    [FontWeight.BOLD]: {
+    [fontWeight.bold]: {
       /** Font sans weight bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Bold',
+      [fontStyle.normal]: 'MuseoModerno-Bold',
       /** Font sans weight bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-BoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-BoldItalic',
     },
     /** Font sans weight extra bold. */
-    [FontWeight.EXTRA_BOLD]: {
+    [fontWeight.extraBold]: {
       /** Font sans weight extra bold normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-ExtraBold',
+      [fontStyle.normal]: 'MuseoModerno-ExtraBold',
       /** Font sans weight extra bold italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-ExtraBoldItalic',
+      [fontStyle.italic]: 'MuseoModerno-ExtraBoldItalic',
     },
     /** Font sans weight black. */
-    [FontWeight.BLACK]: {
+    [fontWeight.black]: {
       /** Font sans weight black normal. */
-      [FontStyle.NORMAL]: 'MuseoModerno-Black',
+      [fontStyle.normal]: 'MuseoModerno-Black',
       /** Font sans weight black italic. */
-      [FontStyle.ITALIC]: 'MuseoModerno-BlackItalic',
+      [fontStyle.italic]: 'MuseoModerno-BlackItalic',
     },
   },
 };
 
-const fontFamilyMap: FontFamilyMap = {
+/** Font family. */
+const fontFamily: FontFamily = {
   /** Font family display. */
-  [FontType.DISPLAY]: FontName.DISPLAY,
+  [fontType.display]: fontName.display,
   /** Font family mono. */
-  [FontType.MONO]: FontName.MONO,
+  [fontType.mono]: fontName.mono,
   /** Font family sans. */
-  [FontType.SANS]: FontName.SANS,
+  [fontType.sans]: fontName.sans,
 };
 
+/** Font config. */
 const fontConfig: FontConfig = {
-  assetMap,
-  fontFamilyMap,
+  assets,
+  fontFamily,
 };
 
 export default fontConfig;

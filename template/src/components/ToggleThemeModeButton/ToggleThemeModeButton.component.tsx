@@ -1,9 +1,7 @@
-import { Button, useColorMode } from 'native-base';
+import { Button, useColorMode, useTheme } from 'native-base';
 
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-
-import useColors from './ToggleThemeModeButton.hook';
 
 /**
  * ToggleThemeModeButton component.
@@ -12,18 +10,11 @@ import useColors from './ToggleThemeModeButton.hook';
  */
 function ToggleThemeModeButton() {
   const { colorMode, toggleColorMode } = useColorMode();
-
-  const colors = useColors();
+  const { colors } = useTheme();
 
   return (
-    <Button
-      onPress={toggleColorMode}
-      backgroundColor={colors.background}
-      _hover={{ backgroundColor: colors.hoverBackground }}
-      _pressed={{ backgroundColor: colors.pressedBackground }}
-      mr={4}
-    >
-      <FontAwesomeIcon icon={colorMode === 'light' ? faMoon : faSun} color={colors.text} />
+    <Button onPress={toggleColorMode} mr={4}>
+      <FontAwesomeIcon icon={colorMode === 'light' ? faMoon : faSun} color={colors.light[100]} />
     </Button>
   );
 }

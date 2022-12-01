@@ -1,7 +1,8 @@
-import { Spinner, Stack, Text, useColorModeValue } from 'native-base';
+import { Spinner, Stack, Text } from 'native-base';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { colorValues } from '@/theme/color';
+import { colorScheme } from '@/theme/color';
 
 import { LoadingProps } from './Loading.type';
 
@@ -10,18 +11,36 @@ import { LoadingProps } from './Loading.type';
  *
  * @returns The Loading component.
  */
-function Loading(props: LoadingProps) {
-  const defaultSpinnerColor = useColorModeValue(colorValues.primary[500], colorValues.primary[300]) as string;
-  const defaultTextColor = useColorModeValue(colorValues.dark[900], colorValues.light[900]) as string;
-
-  const { spinnerColor = defaultSpinnerColor, textColor = defaultTextColor, showMessage, inline = false } = props;
+function Loading({ spinnerColorScheme = colorScheme.primary, textColorScheme, showMessage, inline = false }: LoadingProps) {
+  const [dot, setDot] = useState('');
 
   const { t } = useTranslation();
 
+  useEffect(() => {
+    // Create a timer to update the dot every 1000ms
+    const interval = setInterval(() => {
+      if (dot.length === 3) {
+        setDot('');
+      } else {
+        setDot(`${dot}.`);
+      }
+    }, 1000);
+
+    // Clear the timer when unmounted
+    return () => {
+      clearInterval(interval);
+    };
+  }, [dot]);
+
   return (
     <Stack flex={1} justifyContent="center" alignItems="center" direction={inline ? 'row' : 'column'}>
-      <Spinner color={spinnerColor} />
-      {showMessage && <Text color={textColor}>{t('loading')}</Text>}
+      <Spinner colorScheme={spinnerColorScheme} />
+      {showMessage && (
+        <Text colorScheme={textColorScheme}>
+          {t('label:component.loading.message')}
+          {dot}
+        </Text>
+      )}
     </Stack>
   );
 }

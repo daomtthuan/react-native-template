@@ -1,1 +1,16 @@
-{}
+{
+  "default": {
+    "welcome": {
+      "title": "Trang chủ"
+    },
+    "about": {
+      "title": "Giới thiệu"
+    }
+  },
+  "shared": {
+    "loading": {},
+    "error": {
+      "title": "Lỗi"
+    }
+  }
+}

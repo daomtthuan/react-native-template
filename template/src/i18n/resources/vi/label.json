@@ -1,1 +1,25 @@
-{}
+{
+  "component": {
+    "loading": {
+      "message": "Đang tải"
+    }
+  },
+  "screen": {
+    "default": {
+      "welcome": {
+        "greetings": "Xin chào React Native!"
+      },
+      "about": {
+        "instructions": "Đây là React Native template với đầy đủ các thiết lập.",
+        "author": "Tác giả"
+      }
+    },
+    "shared": {
+      "error": {
+        "code": "Mã lỗi",
+        "message": "Thông tin lỗi"
+      },
+      "loading": {}
+    }
+  }
+}

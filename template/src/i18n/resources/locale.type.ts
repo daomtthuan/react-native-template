@@ -1,31 +1,37 @@
-import { JsonObject } from 'type-fest';
+import { JsonObject, ValueOf } from 'type-fest';
 
 /** Locale code. */
-export enum LocaleCode {
+export const localeCode = {
   /** English code. */
-  EN = 'en',
+  en: 'en',
   /** Vietnamese code. */
-  VI = 'vi',
-}
+  vi: 'vi',
+} as const;
+
+/** Locale code type. */
+export type LocaleCode = ValueOf<typeof localeCode>;
 
 /** Locale display names. */
 export type LocaleDisplayNames = Record<LocaleCode, string>;
 
 /** Resource namespace. */
-export enum LocaleResourceNamespace {
+export const localeResourceNamespace = {
   /** Common resource namespace. */
-  COMMON = 'common',
+  common: 'common',
   /** Error resource namespace. */
-  ERROR = 'error',
+  error: 'error',
   /** Validation resource namespace. */
-  VALIDATION = 'validation',
+  validation: 'validation',
   /** Screen resource namespace. */
-  SCREEN = 'screen',
+  screen: 'screen',
   /** Label resource namespace. */
-  LABEL = 'label',
+  label: 'label',
   /** Button resource namespace. */
-  BUTTON = 'button',
-}
+  button: 'button',
+} as const;
+
+/** Resource namespace type. */
+export type LocaleResourceNamespace = ValueOf<typeof localeResourceNamespace>;
 
 /** Locale resource. */
 export type LocaleResource = {

@@ -1,4 +1,7 @@
 import { Button, Divider, Heading, HStack, Link, Text, VStack } from 'native-base';
+import { useTranslation } from 'react-i18next';
+
+import { colorScheme } from '@/theme/color';
 
 import { AboutScreenProps } from './AboutScreen.type';
 
@@ -7,22 +10,16 @@ import { AboutScreenProps } from './AboutScreen.type';
  *
  * @returns The About screen component.
  */
-export default function AboutScreen({ navigation }: AboutScreenProps) {
+function AboutScreen({ navigation }: AboutScreenProps) {
+  const { t } = useTranslation();
+
   return (
-    <VStack
-      flex={1}
-      justifyContent="center"
-      alignItems="center"
-      p={4}
-      space={4}
-      _light={{ backgroundColor: 'light.900' }}
-      _dark={{ backgroundColor: 'dark.900' }}
-    >
+    <VStack colorScheme={colorScheme.light} flex={1} justifyContent="center" alignItems="center" space={4} p={4}>
       <Heading>React Native template</Heading>
       <VStack width="full">
-        <Text>React Native template with all setup</Text>
+        <Text>{t('label:screen.default.about.instructions')}</Text>
         <HStack>
-          <Text bold>Author: </Text>
+          <Text bold>{t('label:screen.default.about.author')}: </Text>
           <Text>Daomtthuan</Text>
         </HStack>
         <HStack>
@@ -35,3 +32,5 @@ export default function AboutScreen({ navigation }: AboutScreenProps) {
     </VStack>
   );
 }
+
+export default AboutScreen;

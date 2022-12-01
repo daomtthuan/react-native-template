@@ -1,63 +1,77 @@
+import { ValueOf } from 'type-fest';
+
 /** Font name. */
-export enum FontName {
+export const fontName = {
   /** Font display. */
-  DISPLAY = 'MuseoModerno',
+  display: 'MuseoModerno',
   /** Font mono. */
-  MONO = 'CascadiaCode',
+  mono: 'CascadiaCode',
   /** Font sans. */
-  SANS = 'Nunito',
-}
+  sans: 'Nunito',
+};
+
+/** Font name type. */
+export type FontName = ValueOf<typeof fontName>;
 
 /** Font type. */
-export enum FontType {
+export const fontType = {
   /** Font display. */
-  DISPLAY = 'display',
+  display: 'display',
   /** Font mono. */
-  MONO = 'mono',
+  mono: 'mono',
   /** Font sans. */
-  SANS = 'sans',
-}
+  sans: 'sans',
+} as const;
+
+/** Font type type. */
+export type FontType = ValueOf<typeof fontType>;
 
 /** Font weight. */
-export enum FontWeight {
+export const fontWeight = {
   /** Font weight thin. */
-  THIN = '100',
+  thin: '100',
   /** Font weight extra light. */
-  EXTRA_LIGHT = '200',
+  extraLight: '200',
   /** Font weight light. */
-  LIGHT = '300',
+  light: '300',
   /** Font weight normal. */
-  NORMAL = '400',
+  normal: '400',
   /** Font weight medium. */
-  MEDIUM = '500',
+  medium: '500',
   /** Font weight semi bold. */
-  SEMI_BOLD = '600',
+  semiBold: '600',
   /** Font weight bold. */
-  BOLD = '700',
+  bold: '700',
   /** Font weight extra bold. */
-  EXTRA_BOLD = '800',
+  extraBold: '800',
   /** Font weight black. */
-  BLACK = '900',
-}
+  black: '900',
+} as const;
+
+/** Font weight type. */
+export type FontWeight = ValueOf<typeof fontWeight>;
 
 /** Font style. */
-export enum FontStyle {
+export const fontStyle = {
   /** Font style normal. */
-  NORMAL = 'normal',
+  normal: 'normal',
   /** Font style italic. */
-  ITALIC = 'italic',
-}
+  italic: 'italic',
+};
 
-/** Font asset map config. */
-export type FontAssetMap = Record<FontName, Record<FontWeight, Record<FontStyle, string>>>;
+/** Font style type. */
+export type FontStyle = ValueOf<typeof fontStyle>;
 
-/** Font family map. */
-export type FontFamilyMap = Record<FontType, FontName>;
+/** Font asset. */
+export type FontAsset = Record<FontName, Record<FontWeight, Record<FontStyle, string>>>;
+
+/** Font family. */
+export type FontFamily = Record<FontType, FontName>;
 
 /** Font config. */
 export type FontConfig = {
-  /** Font asset map. */
-  assetMap: FontAssetMap;
-  /** Font family map. */
-  fontFamilyMap: FontFamilyMap;
+  /** Font asset. */
+  assets: FontAsset;
+  /** Font family. */
+  fontFamily: FontFamily;
 };

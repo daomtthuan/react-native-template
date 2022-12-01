@@ -1,9 +1,11 @@
 import { PropsWithoutRef } from 'react';
 
+import { ColorScheme } from '@/theme/color';
+
 /** Loading props. */
 export type LoadingProps = PropsWithoutRef<{
-  spinnerColor?: string;
-  textColor?: string;
+  spinnerColorScheme?: ColorScheme;
+  textColorScheme?: ColorScheme;
   showMessage?: boolean;
   inline?: boolean;
 }>;

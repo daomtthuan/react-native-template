@@ -1,6 +1,7 @@
 import { VStack } from 'native-base';
 
 import { Loading } from '@/components/Loading';
+import { colorScheme } from '@/theme/color';
 
 /**
  * LoadingScreen component.
@@ -9,7 +10,7 @@ import { Loading } from '@/components/Loading';
  */
 function LoadingScreen() {
   return (
-    <VStack flex={1} justifyContent="center" alignItems="center" safeArea>
+    <VStack colorScheme={colorScheme.light} flex={1} justifyContent="center" alignItems="center" safeArea>
       <Loading />
     </VStack>
   );

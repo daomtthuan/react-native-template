@@ -1,2 +1,2 @@
 export * from './hook.type';
-export { default as statusChecker } from './status.module';
+export { default as useStatusChecker } from './status.hook';

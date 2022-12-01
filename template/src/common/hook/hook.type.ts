@@ -1,4 +1,16 @@
-import { useAsync } from 'react-util-hooks';
+import { ValueOf } from 'type-fest';
 
 /** Hook status. */
-export type HookStatus = ReturnType<typeof useAsync>['status'];
+export const hookStatus = {
+  /** Idle. */
+  idle: 'idle',
+  /** Pending. */
+  pending: 'pending',
+  /** Success. */
+  success: 'success',
+  /** Error. */
+  error: 'error',
+} as const;
+
+/** Hook status type. */
+export type HookStatus = ValueOf<typeof hookStatus>;

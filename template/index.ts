@@ -1,5 +1,5 @@
-import startApp from '@/main';
+import main from '@/main';
 
 import app from './app.json';
 
-startApp(app.name);
+main(app.name);

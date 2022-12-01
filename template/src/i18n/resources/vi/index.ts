@@ -1,4 +1,4 @@
-import { LocaleCode, LocaleResource, LocaleResourceNamespace } from '../locale.type';
+import { localeCode, LocaleResource, localeResourceNamespace } from '../locale.type';
 import button from './button.json';
 import common from './common.json';
 import error from './error.json';
@@ -8,23 +8,23 @@ import validation from './validation.json';
 
 const viLocaleResource: LocaleResource = {
   /** Vietnamese locale code. */
-  code: LocaleCode.VI,
+  code: localeCode.vi,
   /** Vietnamese display name. */
   displayName: 'Tiếng Việt',
   /** Vietnamese resource. */
   resource: {
     /** Vietnamese common resource. */
-    [LocaleResourceNamespace.COMMON]: common,
+    [localeResourceNamespace.common]: common,
     /** Vietnamese error resource. */
-    [LocaleResourceNamespace.ERROR]: error,
+    [localeResourceNamespace.error]: error,
     /** Vietnamese validation resource. */
-    [LocaleResourceNamespace.VALIDATION]: validation,
+    [localeResourceNamespace.validation]: validation,
     /** Vietnamese screen resource. */
-    [LocaleResourceNamespace.SCREEN]: screen,
+    [localeResourceNamespace.screen]: screen,
     /** Vietnamese label resource. */
-    [LocaleResourceNamespace.LABEL]: label,
+    [localeResourceNamespace.label]: label,
     /** Vietnamese button resource. */
-    [LocaleResourceNamespace.BUTTON]: button,
+    [localeResourceNamespace.button]: button,
   },
 };
 

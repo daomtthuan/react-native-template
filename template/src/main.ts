@@ -9,8 +9,8 @@ import { App } from '@/containers/App';
  *
  * @param appName The app name.
  */
-function startApp(appName: string) {
+function main(appName: string) {
   AppRegistry.registerComponent(appName, () => App);
 }
 
-export default startApp;
+export default main;

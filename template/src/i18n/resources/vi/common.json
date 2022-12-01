@@ -1,8 +1,4 @@
 {
-  "close": "Đóng",
-  "error": "Lỗi",
-  "errorCode": "Mã lỗi",
   "invalid": "Không hợp lệ",
-  "loading": "Đang tải",
   "required": "Bắt buộc"
 }

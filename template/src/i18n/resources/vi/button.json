@@ -1,1 +1,14 @@
-{}
+{
+  "screen": {
+    "default": {
+      "welcome": {
+        "about": "Giới thiệu",
+        "changeLanguage": "Đổi ngôn ngữ sang"
+      }
+    },
+    "shared": {
+      "error": {},
+      "loading": {}
+    }
+  }
+}

@@ -1,1 +1,16 @@
-{}
+{
+  "default": {
+    "welcome": {
+      "title": "Welcome"
+    },
+    "about": {
+      "title": "About"
+    }
+  },
+  "shared": {
+    "loading": {},
+    "error": {
+      "title": "Error"
+    }
+  }
+}

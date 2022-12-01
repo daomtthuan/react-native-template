@@ -1,8 +1,11 @@
 /** App error code. */
-enum AppErrorCode {
-  // Initial error code.
-  /** Application startup failed. */
-  INIT_000000 = 'app.init.000000',
-}
+export const appErrorCode = {
+  /** Initial error code. */
+  init: {
+    /** Application startup failed. */
+    e000000: 'app.init.e000000',
+  },
+} as const;
 
-export default AppErrorCode;
+/** App error code type. */
+export type AppErrorCode = typeof appErrorCode;

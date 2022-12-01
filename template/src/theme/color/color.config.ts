@@ -1,51 +1,33 @@
 import { theme } from 'native-base';
 
-import { ColorConfig, ColorShade, ColorValue, ColorValues, ColorVariant } from './color.type';
+import { getColorValue } from '../helpers/color.module';
+import { ColorConfig, colorScheme, colorShade, ColorValue, ColorValues } from './color.type';
 
 /** Color config. */
 export const colorConfig: ColorConfig = {
-  primary: theme.colors.violet,
-  secondary: theme.colors.yellow,
+  primary: theme.colors.darkBlue,
+  secondary: theme.colors.blue,
   danger: theme.colors.rose,
   success: theme.colors.emerald,
   warning: theme.colors.amber,
   info: theme.colors.cyan,
-  light: {
-    50: '#1d1126',
-    100: '#2d1f38',
-    200: '#463752',
-    300: '#594c63',
-    400: '#776b80',
-    500: '#a89db0',
-    600: '#d7d0db',
-    700: '#ebe4e4',
-    800: '#f4f2f5',
-    900: '#f9f7fa',
-  },
-  dark: {
-    50: '#f9f7fa',
-    100: '#f4f2f5',
-    200: '#ebe4e4',
-    300: '#d7d0db',
-    400: '#a89db0',
-    500: '#776b80',
-    600: '#594c63',
-    700: '#463752',
-    800: '#2d1f38',
-    900: '#1d1126',
-  },
-  muted: theme.colors.coolGray,
+  light: theme.colors.light,
+  dark: theme.colors.coolGray,
+  muted: theme.colors.gray,
 };
-// Init color values
+
+/** Color values. */
 const colorValues = {} as ColorValues;
-Object.values(ColorVariant).forEach((variant) => {
+
+// Init color values from color scheme and shade
+Object.values(colorScheme).forEach((scheme) => {
   const colorValue = {} as ColorValue;
 
-  Object.values(ColorShade).forEach((shade) => {
-    colorValue[shade] = `${variant}.${shade}`;
+  Object.values(colorShade).forEach((shade) => {
+    colorValue[shade] = getColorValue({ scheme, shade });
   });
 
-  colorValues[variant] = colorValue;
+  colorValues[scheme] = colorValue;
 });
 
 export { colorValues };

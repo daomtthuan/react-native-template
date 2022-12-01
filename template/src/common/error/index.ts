@@ -1,2 +1,2 @@
 export * from './error.type';
-export { default as AppErrorCode } from './app.module';
+export * from './app.module';

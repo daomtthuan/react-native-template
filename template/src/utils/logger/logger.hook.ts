@@ -1,8 +1,8 @@
-import { useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { FileLogger } from 'react-native-file-logger';
-import { useAsync } from 'react-util-hooks';
 
-import { executeActionAsync } from '@/common/logic';
+import { HookStatus, hookStatus } from '@/common/hook';
+import { executeAction } from '@/common/logic';
 
 import loggerConfig from './logger.config';
 
@@ -11,10 +11,14 @@ import loggerConfig from './logger.config';
  *
  * @returns The logger status.
  */
-export default function useLogger() {
-  /** Init logger. */
-  const initLogger = useCallback(async () => {
-    await executeActionAsync(
+function useLogger() {
+  const [status, setStatus] = useState<HookStatus>(hookStatus.idle);
+
+  // Init logger.
+  useEffect(() => {
+    setStatus(hookStatus.pending);
+
+    executeAction(
       async () => {
         await FileLogger.configure(loggerConfig);
 
@@ -23,10 +27,12 @@ export default function useLogger() {
         }
       },
       { errorMessage: "Couldn't init logger." },
-    );
+    )
+      .then(() => setStatus(hookStatus.success))
+      .catch(() => setStatus(hookStatus.error));
   }, []);
-
-  const { status } = useAsync(initLogger);
 
   return status;
 }
+
+export default useLogger;

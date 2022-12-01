@@ -1,16 +1,15 @@
 import { NativeBaseProvider } from 'native-base';
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
 
-import { NavigationContainer } from '@react-navigation/native';
-
-import { AppErrorCode } from '@/common/error';
-import { statusChecker } from '@/common/hook';
+import { appErrorCode } from '@/common/error';
+import { useStatusChecker } from '@/common/hook';
 import { useI18n } from '@/i18n';
-import { DefaultRouter } from '@/routers/DefaultRouter';
 import { ErrorScreen } from '@/screens/SharedScreens';
-import themeConfig from '@/theme';
+import { themeConfig } from '@/theme';
 import { useLogger } from '@/utils/logger';
+
+import { Navigation } from '../Navigation';
 
 /**
  * App component.
@@ -18,30 +17,25 @@ import { useLogger } from '@/utils/logger';
  * @returns The App component.
  */
 function App() {
-  /** Logger status. */
+  /** Logger. */
   const loggerStatus = useLogger();
-  /** I18n status. */
+  /** I18n. */
   const i18nStatus = useI18n();
 
-  /** Module statuses list. */
-  const statuses = useMemo(() => [loggerStatus, i18nStatus], [loggerStatus, i18nStatus]);
+  /** Status checker. */
+  const statusChecker = useStatusChecker([loggerStatus, i18nStatus]);
 
   useEffect(() => {
     // Hide splash screen after all modules are ready
-    if (statusChecker.isReady(statuses)) {
+    if (!statusChecker.isPending()) {
       SplashScreen.hide();
     }
-  }, [statuses]);
+  }, [statusChecker]);
 
   return (
     <NativeBaseProvider theme={themeConfig}>
-      {statusChecker.isError(statuses) ? (
-        <ErrorScreen code={AppErrorCode.INIT_000000} />
-      ) : (
-        <NavigationContainer>
-          <DefaultRouter />
-        </NavigationContainer>
-      )}
+      {statusChecker.isError() && <ErrorScreen code={appErrorCode.init.e000000} />}
+      {statusChecker.isSuccess() && <Navigation />}
     </NativeBaseProvider>
   );
 }
